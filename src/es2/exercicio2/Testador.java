@@ -1,15 +1,17 @@
 package es2.exercicio2;
 
+import java.math.BigDecimal;
+
 public class Testador implements Cargo {
 
-	private static final int LIMIAR = 2000;
+	private static final BigDecimal LIMIAR = new BigDecimal(2000.00);
 
 	@Override
-	public double calculaSalario(double salarioBase) {
-		if(salarioBase >= LIMIAR) {
-			return salarioBase * 0.75;
+	public BigDecimal calculaSalario(BigDecimal salarioBase) {
+		if(salarioBase.compareTo(LIMIAR) >= 0) {
+			return salarioBase.multiply(new BigDecimal(0.75));
 		}
-		return salarioBase * 0.85;
+		return salarioBase.multiply(new BigDecimal(0.85));
 	}
 
 }

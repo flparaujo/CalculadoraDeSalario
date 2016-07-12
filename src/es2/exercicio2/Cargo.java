@@ -1,7 +1,9 @@
 package es2.exercicio2;
 
+import java.math.BigDecimal;
+
 public interface Cargo {
 
-    double calculaSalario(double salarioBase);
+    BigDecimal calculaSalario(BigDecimal salarioBase);
 
 }
